@@ -16,6 +16,15 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https:;">
   </head>
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https:;">
+ <script>
+  (function () {
+    const path = window.location.pathname;
+    if (!path.endsWith('/') && !path.includes('.')) {
+      window.history.replaceState(null, '', './');
+    }
+  })();
+</script>
+
   <body>
     <div id="root"></div>
     
