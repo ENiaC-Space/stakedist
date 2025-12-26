@@ -13,9 +13,16 @@
     <script type="module" crossorigin src="./main.d2e5086c.js"></script>
     <link rel="modulepreload" crossorigin href="./vendor.6a5a1686.js">
     <link rel="stylesheet" href="./index.6eaba23d.css">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https:;">
+<meta http-equiv="Content-Security-Policy"
+content="
+  default-src * data: blob:;
+  script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;
+  connect-src * https: wss:;
+  img-src * data: blob:;
+  style-src * 'unsafe-inline';
+  font-src * data:;
+">
   </head>
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https:;">
  <script>
   (function () {
     const path = window.location.pathname;
