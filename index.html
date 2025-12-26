@@ -2,38 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <link rel="icon" type="image/x-icon" href="./logo.18308c6e.png">
+
+    <!-- FIX PATH GITHUB PAGES -->
+    <base href="./" />
+
+    <!-- FIX ICON (KHÔNG DÙNG vite.svg) -->
+    <link rel="icon" type="image/png" href="./logo.18308c6e.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENiaC Space</title>
 
-    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.6eaba23d.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- JS BUNDLE -->
     <script type="module" crossorigin src="./main.d2e5086c.js"></script>
     <link rel="modulepreload" crossorigin href="./vendor.6a5a1686.js">
-    <link rel="stylesheet" href="./index.6eaba23d.css">
-<meta http-equiv="Content-Security-Policy"
-content="
-  default-src * data: blob:;
-  script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;
-  connect-src * https: wss:;
-  img-src * data: blob:;
-  style-src * 'unsafe-inline';
-  font-src * data:;
-">
+
+    <!-- ❌ XÓA HOÀN TOÀN CSP -->
+    <!-- KHÔNG ĐƯỢC CÓ Content-Security-Policy -->
   </head>
- <script>
-  (function () {
-    const path = window.location.pathname;
-    if (!path.endsWith('/') && !path.includes('.')) {
-      window.history.replaceState(null, '', './');
-    }
-  })();
-</script>
 
   <body>
     <div id="root"></div>
-    
+
+    <!-- FIX SPA ROUTING GITHUB -->
+    <script>
+      (function () {
+        const path = window.location.pathname;
+        if (!path.endsWith('/') && !path.includes('.')) {
+          window.history.replaceState(null, '', './');
+        }
+      })();
+    </script>
   </body>
 </html>
